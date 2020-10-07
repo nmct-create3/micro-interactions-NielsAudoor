@@ -42,7 +42,7 @@
     /* global page settings */
     --global-html-color: var(--global-color-neutral-xxxx-dark);
     --global-html-backgroundColor: var(--global-color-neutral-xxxx-light);
-    --global-selection-backgroundColor: var(--global-color-alpha);    
+    --global-selection-backgroundColor: var(--global-color-alpha);
 
     /* borders */
     --global-borderRadius: 3px;
@@ -52,15 +52,22 @@
     --global-transitionTiming-alpha: .1s ease-out;
 
     /* Baseline settings */
-    --global-baseline: 8px;         
-    --global-whitespace: calc(var(--global-baseline) * 3); /* = 24px */
+    --global-baseline: 8px;
+    --global-whitespace: calc(var(--global-baseline) * 3);
+    /* = 24px */
 
-    --global-whitespace-xs: calc(var(--global-baseline) / 2); /* = 4px */
-    --global-whitespace-sm: calc(var(--global-baseline) * 1); /*  = 8px */
-    --global-whitespace-md: calc(var(--global-baseline) * 2); /*  = 16px */
-    --global-whitespace-lg: calc(var(--global-baseline) * 4); /*  = 32px */
-    --global-whitespace-xl: calc(var(--global-whitespace) * 2); /*  = 48px */
-    --global-whitespace-xxl: calc(var(--global-whitespace) * 3); /*  = 72px */
+    --global-whitespace-xs: calc(var(--global-baseline) / 2);
+    /* = 4px */
+    --global-whitespace-sm: calc(var(--global-baseline) * 1);
+    /*  = 8px */
+    --global-whitespace-md: calc(var(--global-baseline) * 2);
+    /*  = 16px */
+    --global-whitespace-lg: calc(var(--global-baseline) * 4);
+    /*  = 32px */
+    --global-whitespace-xl: calc(var(--global-whitespace) * 2);
+    /*  = 48px */
+    --global-whitespace-xxl: calc(var(--global-whitespace) * 3);
+    /*  = 72px */
 
     /* forms */
     --global-placeholder-color: var(--global-color-neutral-x-light);
@@ -306,7 +313,8 @@ input::placeholder {
 .o-container {
     margin-left: auto;
     margin-right: auto;
-    max-width: 79.5em; /* 79.5 * 16px = 1272 */
+    max-width: 79.5em;
+    /* 79.5 * 16px = 1272 */
     width: 100%;
 }
 
@@ -320,19 +328,20 @@ input::placeholder {
     position: relative;
 }
 
-.o-section + .o-section {
+.o-section+.o-section {
     padding-top: var(--global-whitespace);
 }
 
 @media (min-width: 768px) {
-    .o-section--lg + .o-section--lg,
-    .o-section--xl + .o-section--xl {
+
+    .o-section--lg+.o-section--lg,
+    .o-section--xl+.o-section--xl {
         padding-top: var(--global-whitespace-xl);
     }
 }
 
 @media (min-width: 992px) {
-    .o-section--xl + .o-section--xl {
+    .o-section--xl+.o-section--xl {
         padding-top: var(--global-whitespace-xxl);
     }
 }
@@ -360,7 +369,7 @@ input::placeholder {
     margin: 0 -12px;
 }
 
-.o-layout--gutter > .o-layout__item {
+.o-layout--gutter>.o-layout__item {
     padding: 0 calc(var(--global-whitespace) / 2);
 }
 
@@ -368,7 +377,7 @@ input::placeholder {
     margin: 0 -6px;
 }
 
-.o-layout--gutter-sm > .o-layout__item {
+.o-layout--gutter-sm>.o-layout__item {
     padding: 0 6px;
 }
 
@@ -376,7 +385,7 @@ input::placeholder {
     margin: 0 -24px;
 }
 
-.o-layout--gutter-lg > .o-layout__item {
+.o-layout--gutter-lg>.o-layout__item {
     padding: 0 24px;
 }
 
@@ -384,7 +393,7 @@ input::placeholder {
     margin: 0 -48px;
 }
 
-.o-layout--gutter-xl > .o-layout__item {
+.o-layout--gutter-xl>.o-layout__item {
     padding: 0 var(--global-whitespace-xl);
 }
 
@@ -567,7 +576,7 @@ input::placeholder {
     background-color: var(--card-backgroundColor);
     margin-bottom: var(--global-whitespace);
     border-radius: var(--card-borderRadius);
-    box-shadow: 0 0 0 1px rgba(0,0,0, 0.05), 0 2px 4px rgba(0,0,0,.075);
+    box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.05), 0 2px 4px rgba(0, 0, 0, .075);
     overflow: hidden;
 }
 
@@ -575,10 +584,11 @@ input::placeholder {
 .c-card__body,
 .c-card__footer {
     padding: var(--global-whitespace) var(--global-whitespace) 0;
-    overflow: auto; /* Fix margin collapse */
+    overflow: auto;
+    /* Fix margin collapse */
 }
 
-.c-card__footer {   
+.c-card__footer {
     text-align: center;
     border-top: 1px solid var(--card__footer-borderColor);
 }
@@ -617,7 +627,7 @@ input::placeholder {
     Class to put on all input="text" like form inputs
 */
 
-.c-input {       
+.c-input {
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
@@ -684,15 +694,15 @@ more padding on the right to avoid overlap
     Class to put on form buttons or
 */
 
-.c-button {    
+.c-button {
     --button-borderColor: var(--global-color-alpha-dark);
     --button-hover-borderColor: var(--global-color-alpha-dark);
     --button-active-borderColor: var(--global-color-alpha-dark);
-    --button-focus-borderColor:var(--global-color-alpha-dark);
+    --button-focus-borderColor: var(--global-color-alpha-dark);
     --button-backgroundColor: var(--global-color-alpha);
     --button-hover-backgroundColor: var(--global-color-alpha-light);
     --button-active-backgroundColor: var(--global-color-alpha-dark);
-    --button-focus-backgroundColor: var(--global-color-alpha);    
+    --button-focus-backgroundColor: var(--global-color-alpha);
     --button-focus-boxShadow: var(--global-input-focus-boxShadow);
     font-size: 16px;
     font-weight: 600;
@@ -774,7 +784,8 @@ more padding on the right to avoid overlap
 
 .c-custom-option__symbol {
     display: block;
-    opacity: 0; /* Hide the symbol initially */
+    opacity: 0;
+    /* Hide the symbol initially */
     transform: scale(.5);
     transition: transform var(--global-transitionTiming-alpha), opacity var(--global-transitionTiming-alpha);
 }
@@ -800,16 +811,17 @@ more padding on the right to avoid overlap
 
 /* focused and active state */
 
-.c-option--hidden:focus + .c-custom-option,
-.c-option--hidden:active + .c-custom-option {
+.c-option--hidden:focus+.c-custom-option,
+.c-option--hidden:active+.c-custom-option {
     --custom-option-borderColor: var(--global-input-focus-borderColor);
     --custom-option-boxShadow: var(--global-input-focus-boxShadow);
 }
 
 /* checked state */
 
-.c-option--hidden:checked + .c-custom-option .c-custom-option__symbol {
-    opacity: 1; /* Show the symbol when the invisible checkbox/radio button is checked */
+.c-option--hidden:checked+.c-custom-option .c-custom-option__symbol {
+    opacity: 1;
+    /* Show the symbol when the invisible checkbox/radio button is checked */
     transform: scale(1);
 }
 
@@ -828,7 +840,7 @@ more padding on the right to avoid overlap
     margin-bottom: calc(var(--global-whitespace) / 2);
 }
 
-.c-custom-toggle-list__item + .c-custom-toggle-list__item {
+.c-custom-toggle-list__item+.c-custom-toggle-list__item {
     padding-top: calc(var(--global-whitespace) / 2);
     border-top: 1px solid var(--toggle-list-borderColor);
 }
@@ -873,38 +885,38 @@ more padding on the right to avoid overlap
     height: 22px;
     width: 22px;
     border-radius: 22px;
-    box-shadow: 0 1px 3px 1px rgba(0,0,0,.2);
+    box-shadow: 0 1px 3px 1px rgba(0, 0, 0, .2);
     background-color: var(--toggle__switch-backgroundColor);
     transition: var(--toggle__switch-transition);
 }
 
 /* focused and active state */
 
-.c-option--hidden:focus + .c-custom-toggle,
-.c-option--hidden:active + .c-custom-toggle {
+.c-option--hidden:focus+.c-custom-toggle,
+.c-option--hidden:active+.c-custom-toggle {
     --toggle-borderColor: var(--global-input-focus-borderColor);
     --toggle-boxShadow: var(--toggle-focus-boxShadow);
 }
 
 /* checked state */
 
-.c-option--hidden:checked + .c-custom-toggle {
+.c-option--hidden:checked+.c-custom-toggle {
     --toggle-backgroundColor: var(--toggle-checked-backgroundColor);
     --toggle-borderColor: var(--toggle-checked-borderColor);
-    --toggle__switch-backgroundColor: var(--toggle__switch-checked-backgroundColor);    
+    --toggle__switch-backgroundColor: var(--toggle__switch-checked-backgroundColor);
 }
 
-.c-option--hidden:checked + .c-custom-toggle .c-custom-toggle__fake-input::after {
-    transform: translate(24px,0);
+.c-option--hidden:checked+.c-custom-toggle .c-custom-toggle__fake-input::after {
+    transform: translate(24px, 0);
 }
 
 /* special active state */
 
-.c-option--hidden:active + .c-custom-toggle .c-custom-toggle__fake-input::after {
+.c-option--hidden:active+.c-custom-toggle .c-custom-toggle__fake-input::after {
     width: 28px;
 }
 
-.c-option--hidden:active:checked + .c-custom-toggle .c-custom-toggle__fake-input::after {
+.c-option--hidden:active:checked+.c-custom-toggle .c-custom-toggle__fake-input::after {
     margin-left: -6px;
 }
 
@@ -930,11 +942,49 @@ more padding on the right to avoid overlap
     fill: var(--global-color-neutral-x-light);
 }
 
+
+
 /*
     Component: Password Toggle
     ---
     Password toggle custom checkbox
 */
+.c-toggle-password-container{
+    display: block;
+    position: relative;
+}
+.c-toggle-password{
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.c-toggle-password__label{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding: var(--global-whitespace);
+}
+
+.c-toggle-password__icon {
+    display: block;
+    width: calc(var(--global-baseline)*3);
+}
+
+.c-toggle-password__icon--hide {
+    display: none;
+}
+
+.c-toggle-password__checkbox:checked+.c-toggle-password__label .c-toggle-password__icon--hide{
+    display: block;
+}
+
+
+.c-toggle-password__checkbox:checked+.c-toggle-password__label .c-toggle-password__icon--show{
+    display: none;
+}
 
 /*------------------------------------*\
 #UTILITIES
@@ -1097,33 +1147,43 @@ more padding on the right to avoid overlap
     .u-1-of-2-bp1 {
         width: 50% !important;
     }
+
     .u-1-of-3-bp1 {
         width: 33.3333333333% !important;
     }
+
     .u-2-of-3-bp1 {
         width: 66.6666666667% !important;
     }
+
     .u-1-of-4-bp1 {
         width: 25% !important;
     }
+
     .u-3-of-4-bp1 {
         width: 75% !important;
     }
+
     .u-1-of-5-bp1 {
         width: 20% !important;
     }
+
     .u-2-of-5-bp1 {
         width: 40% !important;
     }
+
     .u-3-of-5-bp1 {
         width: 60% !important;
     }
+
     .u-4-of-5-bp1 {
         width: 80% !important;
     }
+
     .u-1-of-6-bp1 {
         width: 16.6666666667% !important;
     }
+
     .u-5-of-6-bp1 {
         width: 83.3333333333% !important;
     }
@@ -1133,33 +1193,43 @@ more padding on the right to avoid overlap
     .u-1-of-2-bp2 {
         width: 50% !important;
     }
+
     .u-1-of-3-bp2 {
         width: 33.3333333333% !important;
     }
+
     .u-2-of-3-bp2 {
         width: 66.6666666667% !important;
     }
+
     .u-1-of-4-bp2 {
         width: 25% !important;
     }
+
     .u-3-of-4-bp2 {
         width: 75% !important;
     }
+
     .u-1-of-5-bp2 {
         width: 20% !important;
     }
+
     .u-2-of-5-bp2 {
         width: 40% !important;
     }
+
     .u-3-of-5-bp2 {
         width: 60% !important;
     }
+
     .u-4-of-5-bp2 {
         width: 80% !important;
     }
+
     .u-1-of-6-bp2 {
         width: 16.6666666667% !important;
     }
+
     .u-5-of-6-bp2 {
         width: 83.3333333333% !important;
     }
@@ -1169,33 +1239,43 @@ more padding on the right to avoid overlap
     .u-1-of-2-bp3 {
         width: 50% !important;
     }
+
     .u-1-of-3-bp3 {
         width: 33.3333333333% !important;
     }
+
     .u-2-of-3-bp3 {
         width: 66.6666666667% !important;
     }
+
     .u-1-of-4-bp3 {
         width: 25% !important;
     }
+
     .u-3-of-4-bp3 {
         width: 75% !important;
     }
+
     .u-1-of-5-bp3 {
         width: 20% !important;
     }
+
     .u-2-of-5-bp3 {
         width: 40% !important;
     }
+
     .u-3-of-5-bp3 {
         width: 60% !important;
     }
+
     .u-4-of-5-bp3 {
         width: 80% !important;
     }
+
     .u-1-of-6-bp3 {
         width: 16.6666666667% !important;
     }
+
     .u-5-of-6-bp3 {
         width: 83.3333333333% !important;
     }
@@ -1205,33 +1285,43 @@ more padding on the right to avoid overlap
     .u-1-of-2-bp4 {
         width: 50% !important;
     }
+
     .u-1-of-3-bp4 {
         width: 33.3333333333% !important;
     }
+
     .u-2-of-3-bp4 {
         width: 66.6666666667% !important;
     }
+
     .u-1-of-4-bp4 {
         width: 25% !important;
     }
+
     .u-3-of-4-bp4 {
         width: 75% !important;
     }
+
     .u-1-of-5-bp4 {
         width: 20% !important;
     }
+
     .u-2-of-5-bp4 {
         width: 40% !important;
     }
+
     .u-3-of-5-bp4 {
         width: 60% !important;
     }
+
     .u-4-of-5-bp4 {
         width: 80% !important;
     }
+
     .u-1-of-6-bp4 {
         width: 16.6666666667% !important;
     }
+
     .u-5-of-6-bp4 {
         width: 83.3333333333% !important;
     }
@@ -1277,6 +1367,7 @@ No media query since this is the default in mobile first design
 */
 
 @media print {
+
     *,
     *:before,
     *:after {
@@ -1287,16 +1378,20 @@ No media query since this is the default in mobile first design
         box-shadow: none !important;
         text-shadow: none !important;
     }
+
     a,
     a:visited {
         text-decoration: underline;
     }
+
     a[href]:after {
-        content: " (" attr(href) ")";
+        content: " ("attr(href) ")";
     }
+
     abbr[title]:after {
-        content: " (" attr(title) ")";
+        content: " ("attr(title) ")";
     }
+
     /*
     * Don't show links that are fragment identifiers,
     * or use the `javascript:` pseudo protocol
@@ -1305,14 +1400,17 @@ No media query since this is the default in mobile first design
     a[href^="javascript:"]:after {
         content: "";
     }
+
     pre {
         white-space: pre-wrap !important;
     }
+
     pre,
     blockquote {
         border: 1px solid #999;
         page-break-inside: avoid;
     }
+
     /*
     * Printing Tables:
     * http://css-discuss.incutio.com/wiki/Printing_Tables
@@ -1320,16 +1418,19 @@ No media query since this is the default in mobile first design
     thead {
         display: table-header-group;
     }
+
     tr,
     img {
         page-break-inside: avoid;
     }
+
     p,
     h2,
     h3 {
         orphans: 3;
         widows: 3;
     }
+
     h2,
     h3 {
         page-break-after: avoid;
